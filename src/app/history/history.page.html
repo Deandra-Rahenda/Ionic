@@ -1,0 +1,30 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+   <ion-button slot="start" [routerLink]="['/home']">
+    <ion-icon name="arrow-back-outline"></ion-icon>
+   </ion-button>
+    <ion-title>
+      History
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-list *ngFor="let data of formData">
+    <ion-item>
+      <ion-label>Nama: {{ data.name }}</ion-label><br>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>NIM: {{ data.nim }}</ion-label><br>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Kelas: {{ data.class }}</ion-label><br>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Pesan: {{ data.message }}</ion-label><br>
+    </ion-item>
+  </ion-list>
+</ion-content>
